@@ -10,4 +10,4 @@ reopsitory, instead follow Rust's [security policy][policy].
 
 ## Documentation
 
-* [Handling a security reports](docs/handling-reports.md)
+* [Handling a security report](docs/handling-reports.md)
