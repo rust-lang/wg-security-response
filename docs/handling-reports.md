@@ -43,6 +43,11 @@ announcement at this time. Past procedure has been to make point releases and
 patches available soon after an announcement. Depending on the severity of the
 report we may need to figure out how to do private releases ahead of time.
 
+If we consider the vulnerability's severity to be medium or higher we need to
+post it to distros@lists.openwall.com **3 days** before the public
+announcement. [Read the instructions on how to do that carefully][distros], as
+they're pretty strict on what they want.
+
 When publishing an announcement, this should include:
 
 * Send mail to the google group mailing list. This should be the first thing
@@ -55,3 +60,10 @@ When publishing an announcement, this should include:
 * Make a post to users.rust-lang.org containing the same contents as the blog.
 
 * Publish the GitHub Advisory, also with a disclaimer that points to the blog.
+
+* Send an email to oss-security@lists.openwall.com with a brief excerpt of the
+  advisory and the link to the google group mail. [Instructions on how to send
+  an email to oss-security@][oss-security]
+
+[distros]: https://oss-security.openwall.org/wiki/mailing-lists/distros#list-policy-and-instructions-for-reporters
+[oss-security]: https://oss-security.openwall.org/wiki/mailing-lists/oss-security
