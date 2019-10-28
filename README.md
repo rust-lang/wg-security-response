@@ -1,6 +1,7 @@
-# Rust's Security Team
+# Rust's Security Response WG
 
-This repository is intended to document the procedures of Rust's Security Team.
+This repository is intended to document the procedures of Rust's Security
+Response WG.
 
 If you're looking for the Rust language security policy, [go here][policy]. If
 you're looking to report a vulnerability, do not open an issue in this

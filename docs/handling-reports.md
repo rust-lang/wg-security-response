@@ -6,7 +6,7 @@
    to this email address sometimes, it can be disregarded.
 2. Messages may be encrypted with our GPG key. The private key is stored in
    Rust's 1password instance. You can request access to the key or you can wait
-   for another member to decrypt and share the information amongst the team.
+   for another member to decrypt and share the information amongst the WG.
 3. The report should be determined if it's credible or not. Either way, a
    response should be sent the the reporter relatively soon (we try to be
    ASAP-ish). It's fine to say we continue to investigate.
@@ -51,8 +51,9 @@ they're pretty strict on what they want.
 When publishing an announcement, this should include:
 
 * Send mail to the google group mailing list. This should be the first thing
-  done. Make sure to sign with the GPG key. Probably test out sending the signed
-  mail to another security team member first to ensure the signature worked.
+  done. Make sure to sign with the GPG key. Probably test out sending the
+  signed mail to another Security Response WG member first to ensure the
+  signature worked.
 
 * Make a post to the blog. Use the same content, but add a disclaimer that it's
   not official and point to the google group mail.
