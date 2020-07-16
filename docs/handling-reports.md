@@ -51,9 +51,7 @@ they're pretty strict on what they want.
 When publishing an announcement, this should include:
 
 * Send mail to the google group mailing list. This should be the first thing
-  done. Make sure to sign with the GPG key. Probably test out sending the
-  signed mail to another Security Response WG member first to ensure the
-  signature worked.
+  done. Documentation on how to do so is available later in this document.
 
 * Make a post to the blog. Use the same content, but add a disclaimer that it's
   not official and point to the google group mail.
@@ -68,3 +66,40 @@ When publishing an announcement, this should include:
 
 [distros]: https://oss-security.openwall.org/wiki/mailing-lists/distros#list-policy-and-instructions-for-reporters
 [oss-security]: https://oss-security.openwall.org/wiki/mailing-lists/oss-security
+
+## Disclosing a vulnerability on the rustlang-security-announcements Google Group
+
+This procedure was tested on a Linux system.
+
+1. Import the security public key in your local GPG keychain, to be able to
+   later ensure the signature is valid:
+
+   ```
+   curl https://www.rust-lang.org/static/keys/rust-security-team-key.gpg.ascii | gpg --import
+   ```
+
+2. Copy the announcement in a local text file named `announcement.txt`. Add the
+   following sentence at the start of the report:
+
+   > Note: if you're reading this advisory on the Google Groups web interface
+   > please note that the GPG signature doesn't match, due to the processing
+   > Google Groups does to the message. You can find a signed copy of this
+   > advisory attached.
+
+3. Sign the message with the security team's key. The command should be
+   executed inside this repository. You need to provide your 1password
+   credentials when prompted.
+
+   ```
+   ./with-rust-security-key.sh gpg --clearsign announcement.txt
+   ```
+
+4. Verify the signature is correct:
+
+    ```
+    gpg --verify announcement.txt.asc
+    ```
+
+5. Send a mail to rustlang-security-announcements@googlegroups.com from your
+   personal email address with the content of `announcement.txt.asc` as the
+   message body. Also attach `announcement.txt.asc` to the same mail.
