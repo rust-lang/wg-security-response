@@ -13,27 +13,19 @@
 4. Now comes the fun part, discussing the vulnerability! (assuming it needs more
    investigation and hasn't been ruled out).
 
-Discussing the vulnerability can range from being extremely sensitive to "fine
-to try to keep it private for now". There's a few venues that the response can
-be discussed at:
+The preferred venue for discussing the vulnerability and plan a fix is a Zulip
+stream (on [the rust-lang instance](https://rust-lang.zulipchat.com)) dedicated
+to the vulnerability. A dedicated stream allows us to grant access to the
+reporter or other team members without letting them access other discussions.
 
-* First, you can use `security@rust-lang.org`. This may or may not include the
-  original reporter. Keep in mind that email clients have varying degrees of
-  caching and such, super sensitive stuff should always be encrypted. You get to
-  always choose who sees what here, but it's not a great medium to develop with
-  or make public later.
+The stream should be named `wg-security-response/<date-of-the-report>`, it
+should be private and it should allow new members to read past messages. Keep
+in mind that, while organization admins can't read the chat contents even if
+they have full access to the Zulip instance, they can read the stream name:
+avoid putting hints of what's going on in the name or the description.
 
-* Next you can use the `#security` channel in Discord. Keep in mind the core
-  team can see messages here as well. Users (like the reporter) cannot be added
-  here.
-
-* We've also started to test out using GitHub Advisories. This is on the
-  "security" tab on GitHub. Keep in mind the core team can see all messages here
-  as well. You can add anyone to the conversation here on the bug (including the
-  reporter).
-
-Over the next few days you'll develop a response to the security issue in these
-venues, and it's recommended to do this in collaboration with the original
+Over the next few days you'll develop a response to the security issue on
+Zulip, and it's recommended to do this in collaboration with the original
 reporter as well. They like to be kept in the loop and can often help out in
 validating fixes and such!
 
