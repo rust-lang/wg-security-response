@@ -83,15 +83,25 @@ This procedure was tested on a Linux system.
    credentials when prompted.
 
    ```
-   ./with-rust-security-key.sh gpg --clearsign announcement.txt
+   ./with-rust-security-key.sh gpg --local-user 0xEFB9860AE7520DAC --clear-sign ${file}
    ```
 
 4. Verify the signature is correct:
 
     ```
-    gpg --verify announcement.txt.asc
+    gpg --verify ${file}.asc
     ```
 
 5. Send a mail to rustlang-security-announcements@googlegroups.com from your
    personal email address with the content of `announcement.txt.asc` as the
    message body. Also attach `announcement.txt.asc` to the same mail.
+
+## Signing patch files
+
+Patch files stored in this repository should be signed with the security key.
+To do so you'll need to run this command inside the repository (you'll need to
+provide your 1Password credentials when prompted):
+
+```
+./with-rust-security-key.sh gpg --local-user 0xEFB9860AE7520DAC --sign --armor --detach ${file}
+```
