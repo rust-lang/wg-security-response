@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script executes the command provided as argument with the gpg
 # environment configured to use the Rust Security team key. Sample usage:
 #
@@ -50,7 +50,7 @@ if ! op --version | grep "^2\." -q; then
 fi
 
 # Ensure the 1Password account is configured
-op_user="$(op account list --format=json | jq -r '.[] | select(.url == "https://rust-lang.1password.com").user_uuid')"
+op_user="$(op account list --format=json | jq -r '.[] | select(.url == "rust-lang.1password.com").user_uuid')"
 if [[ "${op_user}" == "" ]]; then
     echo "1password is not configured, run this command to set it up:"
     echo
